@@ -1,1 +1,1 @@
-from . import PyLoki
+from .loki import PyLoki
