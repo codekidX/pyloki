@@ -1,2 +1,11 @@
 venv/
-requirements.txt
+
+# bytecods
+*.py[cod]
+
+# distribution
+dist/
+publish.sh
+
+# test loki yaml
+loki-docker/
