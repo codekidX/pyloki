@@ -7,13 +7,17 @@ class PyLoki:
 
 	def __init__(self, host: str='localhost', port: str=3100,
 				 username: str='', password: str='', protocol: str='http',
-				 source: str='default', job='default', src_host='localhost')
+				 source: str='default', job='default', src_host='localhost'):
 
 		self._address = f'http://{username}@{password}{host}:{port}'
+		self._source = source
+		self._host = host
+		self._job = job
+		self._src_host = src_host
 		self._post_address = f'{self._address}/api/prom/push'
 		self._tz = 'Asia/Kolkata'
 		self._headers = {
-    		'Content-type': 'application/json'
+    			'Content-type': 'application/json'
 		}
 
 
