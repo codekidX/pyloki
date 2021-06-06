@@ -1,7 +1,7 @@
 PyLoki
 ------
 
-A scalable instance associated module for logging and querying in Grafana Loki
+A scalable instance associated module for logging and querying(alpha) in Grafana Loki
 
 
 ## Get Started
@@ -43,7 +43,7 @@ set_header(key, value)
 Sets additional http headers to logs
 
 
-# Contributing
+## Contributing
 
 - Create a python3 virtualenv 
 ```bash
@@ -62,14 +62,17 @@ python -m pyloki.loki_test
 
 ## Versions
 
-> ### 0.1.0
-- Alpha with barely working code
+> ### 0.2.1
+- Add `error` method on PyLoki
+- Add `custom` method to pass your own label on PyLoki
 
 > ### 0.2.0
 - Proper implementation of logger
 - Add Testsfor logging
 - Add alpha client for querying the logs
 
+> ### 0.1.0
+- Alpha with barely working code
 
 ### License
 

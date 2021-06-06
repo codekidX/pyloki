@@ -68,6 +68,10 @@ class PyLoki:
     def set_tz(self, zone='Asia/Kolkata'):
         self._tz = zone
 
+    def custom(self, msg: str, label: str) -> Response:
+        payload = self.__log_stream(msg, label)
+        return requests.post(self._post_address, data=payload, headers=self._headers)
+
     def debug(self, msg) -> Response:
         payload = self.__log_stream(msg, 'DEBUG')
         return requests.post(self._post_address, data=payload, headers=self._headers)
@@ -78,6 +82,10 @@ class PyLoki:
 
     def warn(self, msg) -> Response:
         payload = self.__log_stream(msg, 'WARN')
+        return requests.post(self._post_address, data=payload, headers=self._headers)
+
+    def error(self, msg) -> Response:
+        payload = self.__log_stream(msg, 'ERROR')
         return requests.post(self._post_address, data=payload, headers=self._headers)
 
     def critical(self, msg) -> Response:
