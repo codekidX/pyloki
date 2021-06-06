@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='pyloki',
     packages=['pyloki'],
-    version='0.2.0',
+    version='0.2.1',
     license='MIT',
     description='A scalable logging module and client for Grafana Loki',
     author='Ashish Shekar',
